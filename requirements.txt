@@ -1,4 +1,5 @@
-#python=3.11.9=he1021f5_0
 Flask==3.0.3
-openai==1.39.0
+openai==1.40.6
+Requests==2.32.3
+Werkzeug==3.0.3
 youtube_transcript_api==0.6.2
