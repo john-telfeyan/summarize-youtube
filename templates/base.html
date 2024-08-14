@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% block meta_description %}Default description{% endblock %}">
+    <title>{% block title %}{{ page_title }}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <style>
+        body {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .container {
+            max-width: 960px;
+        }
+        header, footer {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 15px;
+            }
+            header, footer {
+                margin-bottom: 15px;
+            }
+            body {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>{% block header %}{{ page_header }}{% endblock %}</h1>
+        </header>
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+        <footer class="my-4">
+            
+            <p>
+                
+                <a href="https://github.com/john-telfeyan/summarize-youtube" target="_blank">
+                    <img src="{{ url_for('static', filename='github-mark.png') }}" alt="GitHub" style="width: 20px;">
+                </a> |
+                <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">
+                <img src="{{ url_for('static', filename='by-sa.png') }}" alt="Copyleft" style="width: 40px;"></a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
