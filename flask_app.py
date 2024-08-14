@@ -26,7 +26,7 @@ system_role_description = "You are a co-reference based summarization algorithm"
 Output_File = "Summaries.txt"
 Output_FullText = "Full_Transcript.txt"
 Input_File = "Yt_Ids_nls.csv"
-openai_model_name = "gpt-4'" #"gpt-3.5-turbo"
+openai_model_name = "gpt-3.5-turbo"
 
 # Connect to OpenAI
 with open(key_file, 'r') as f:
@@ -124,7 +124,7 @@ def my_form():
 <body>
     <h1>YouTube Summarizer App</h1>
     <h2>Enter the YouTube Video Key and click "Summarize" to see the Summary</h2>
-    <form action="ytSummarize" method="POST">
+    <form action="YoutubeSummarizer" method="POST">
         Video Key: The key is the last part of the URL of the video for example in the URL https://www.youtube.com/watch?v=utU9L8ONRbk the key is "utU9L8ONRbk"<br>
         <input type="text" name="Key" value="utU9L8ONRbk"><BR><BR>
         How many minutes do you want summarized into one sentence?<br>
